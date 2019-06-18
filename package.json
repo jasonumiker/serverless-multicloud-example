@@ -1,0 +1,18 @@
+{
+  "name": "serverless-multicloud-example",
+  "version": "1.0.0",
+  "description": "Example multicloud serverless express app",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Umiker",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-express": "^2.0.11"
+  },
+  "devDependencies": {
+    "serverless-offline": "^5.3.3",
+    "serverless-google-cloudfunctions": "^2.3.2"
+  }
+}
