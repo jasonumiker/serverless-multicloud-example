@@ -7,12 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Umiker",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "serverless-express": "^2.0.11"
   },
   "devDependencies": {
-    "serverless-offline": "^5.3.3",
-    "serverless-google-cloudfunctions": "^2.3.2"
+    "serverless-azure-functions": "^0.7.0",
+    "serverless-google-cloudfunctions": "^2.3.2",
+    "serverless-offline": "^5.3.3"
   }
 }

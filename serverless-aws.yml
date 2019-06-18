@@ -57,6 +57,11 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+package:
+  exclude:
+#    - node_modules/**
+    - .gitignore
+    - .git/**
 
 functions:
   app:
