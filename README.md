@@ -1,5 +1,7 @@
 # serverless-multicloud-example
-An example Node Express app that can be deployed multicloud by the Serverless framework. The differences in handler for each serverless service is abstracted by the serverless-express package.
+An example Node Express app that can be deployed multicloud by the Serverless framework. The differences in handler for each serverless service is abstracted by the serverless-express package - which has been isolated in handler.js leaving app.js for our cloud-agnostic business logic.
+
+I intend for it to be a working example of the concepts discussed here - https://www.thoughtworks.com/insights/blog/mitigating-serverless-lock-fears
 
 Copy the relevant severless-xxx.yml file for the cloud you want (AWS, GCP or Azure) to serverless.yml and do a sls deploy.
 
