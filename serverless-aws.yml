@@ -69,7 +69,22 @@ functions:
     events:
       - http:
           path: /
+          method: GET
+      - http:
+          path: /documents/all
+          method: GET
+      - http:
+          path: /documents/id
           method: GET 
+      - http:
+          path: /documents/new
+          method: POST
+      - http:
+          path: /documents/id
+          method: DELETE 
+      - http:
+          path: /documents/id
+          method: PATCH 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
