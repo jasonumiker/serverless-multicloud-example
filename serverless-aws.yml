@@ -48,6 +48,8 @@ provider:
 # you can define service wide environment variables here
 #  environment:
 #    variable1: value1
+  environment:
+    MONGO_URL: 'mongodb://username:password@mongo:27017/todolist'
 
 # you can add packaging information here
 #package:
@@ -69,7 +71,22 @@ functions:
     events:
       - http:
           path: /
+          method: GET
+      - http:
+          path: /documents/all
+          method: GET
+      - http:
+          path: /documents/id
           method: GET 
+      - http:
+          path: /documents/new
+          method: POST
+      - http:
+          path: /documents/id
+          method: DELETE 
+      - http:
+          path: /documents/id
+          method: PATCH 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
