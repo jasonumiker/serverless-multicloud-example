@@ -9,6 +9,8 @@
   "author": "Jason Umiker",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "mongodb": "^3.2.7",
     "serverless-express": "^2.0.11"
   },
   "devDependencies": {
