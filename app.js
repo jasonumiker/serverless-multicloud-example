@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Setup Mongo
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert')
-const url = 'mongodb://localhost:27017'
+const url = process.env.MONGO_URL
 const dbName = 'todolist'
 const client = new MongoClient(url)
 var ObjectID = require('mongodb').ObjectID;
