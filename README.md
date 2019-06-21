@@ -16,12 +16,12 @@ For the AWS side you can use the offline testing functionality by doing a `sls o
 The example app is a todo list application with a description and due date field for each task.
 
 The APIs are:  
-GET / - App description and version  
-POST /documents/new - Create a task/document (takes two parameters - `description` and `duedate`)  
-GET /documents/all - Return all tasks/documents  
-GET /documents/id - Return a particular document by ID (via `id` parameter)  
-DELETE /documents/id - Delete a particular document by ID (via `id` parameter)  
-PATCH /documents/id - Update a particular document by ID (via `id` parameter and it takes `description` and/or `duedate` as the fields to update)  
+`GET` - `/` - App description and version  
+`POST` - `/documents/new` - Create a task/document (takes two parameters - `description` and `duedate`)  
+`GET` - `/documents/all` - Return all tasks/documents  
+`GET` - `/documents/id` - Return a particular document by ID (via `id` parameter)  
+`DELETE` - `/documents/id` - Delete a particular document by ID (via `id` parameter)  
+`PATCH` - `/documents/id` - Update a particular document by ID (via `id` parameter and it takes `description` and/or `duedate` as the fields to update)  
 
 There is an example of the service up in each cloud:  
 AWS - https://sesallvxkb.execute-api.ap-southeast-2.amazonaws.com/dev/documents/all  
