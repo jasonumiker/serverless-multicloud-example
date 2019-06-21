@@ -5,4 +5,6 @@ I intend for it to be a working example of the concepts discussed here - https:/
 
 Copy the relevant severless-xxx.yml file for the cloud you want (AWS, GCP or Azure) to serverless.yml and do a sls deploy.
 
+You also need to provide an Internet-facing Mongo URL via environment variable in the serverless-xxx.yml file to use the Mongo CRUD functionality.
+
 Note that for GCP some initial setup is required as described here - https://serverless.com/framework/docs/providers/google/guide/credentials/. The other clouds you just need valid login details and CLIs configured to proceed.
