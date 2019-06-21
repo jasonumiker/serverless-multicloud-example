@@ -1,11 +1,9 @@
-# package directories
 node_modules
 jspm_packages
-
-# Serverless directories
 .serverless
-
 serverless.yml
 app-function.json
-
+id-function.json
+getall-function.json
+postnew-function.json
 mongo

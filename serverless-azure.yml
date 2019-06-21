@@ -20,6 +20,8 @@ service: serverless-multicloud-example # NOTE: update this with your service nam
 provider:
   name: azure
   location: Australia East
+  environment:
+    MONGO_URL: 'mongodb://username:password@mongo:27017/todolist'
 
 plugins:
   - serverless-azure-functions
@@ -44,6 +46,53 @@ functions:
       - http: true
         x-azure-settings:
           authLevel : anonymous
+          name: req
+          methods:
+            - get
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+  getall:
+    handler: handler.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+          name: req
+          methods:
+            - get
+          route: app/documents/all
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+  id:
+    handler: handler.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+          name: req
+          methods:
+            - get
+            - delete
+            - patch
+          route: app/documents/id
+      - http: true
+        x-azure-settings:
+          direction: out
+          name: res
+  postnew:
+    handler: handler.handler
+    events:
+      - http: true
+        x-azure-settings:
+          authLevel : anonymous
+          name: req
+          methods:
+            - post
+          route: app/documents/new
       - http: true
         x-azure-settings:
           direction: out
