@@ -11,6 +11,8 @@ provider:
   #
   # the path to the credentials file needs to be absolute
   credentials: ~/.gcloud/keyfile.json
+  environment:
+    MONGO_URL: 'mongodb://username:password@mongo:27017/todolist'
 
 plugins:
   - serverless-google-cloudfunctions
