@@ -33,8 +33,6 @@ app.get(['/documents/all', '/api/app/documents/all'], (req, res, next) => {
                 res.status(200).send(result)
             }
         })
-
-        client.close()
     })
 })
 
@@ -63,8 +61,6 @@ app.get(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         else {
             res.status(400).send({ 'error': 'No id parameter specified' })
         }
-
-        client.close()
     })
 })
 
@@ -85,8 +81,6 @@ app.post(['/documents/new', '/api/app/documents/new'], (req, res, next) => {
             }
             res.status(200).send(result)
         })
-
-        client.close()
     })
 })
 
@@ -111,8 +105,6 @@ app.delete(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         else {
             res.status(400).send({ 'error': 'No id parameter specified' })
         }
-
-        client.close()
     })
 })
 
@@ -145,8 +137,6 @@ app.patch(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         else {
             res.status(400).send({ 'error': 'No id parameter specified' })
         }
-
-        client.close()
     })
 })
 
