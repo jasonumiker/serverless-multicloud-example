@@ -1,4 +1,7 @@
 # serverless-multicloud-example
+
+This is the example for my blog post - [Blog Post](blogpost.md)
+
 An example Node Express app that can be deployed in any of the major clouds by the Serverless framework (https://serverless.com). The differences in handler for each serverless service is abstracted by the serverless-express plugin (https://www.npmjs.com/package/serverless-express) - which has been isolated in `handler.js` - leaving `app.js` for our cloud-agnostic business logic.
 
 I intend for it to be a working example of the serverless without lock-in concepts discussed here - https://www.thoughtworks.com/insights/blog/mitigating-serverless-lock-fears
