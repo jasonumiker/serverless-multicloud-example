@@ -20,7 +20,6 @@ app.get(['/documents/all', '/api/app/documents/all'], (req, res, next) => {
     client.connect(function (err) {
         console.log("Responding to a GET /documents/all")
         assert.equal(null, err)
-        console.log("Connected successfully to mongo")
         const db = client.db(dbName)
         const collection = db.collection('items');
 
@@ -44,7 +43,6 @@ app.get(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         console.log("Responding to a GET /documents/id")
         console.log(req.query)
         assert.equal(null, err)
-        console.log("Connected successfully to mongo")
         const db = client.db(dbName)
         const collection = db.collection('items');
 
@@ -74,7 +72,6 @@ app.post(['/documents/new', '/api/app/documents/new'], (req, res, next) => {
     console.log(req.body)
     client.connect(function (err) {
         assert.equal(null, err)
-        console.log("Connected successfully to mongo")
         const db = client.db(dbName)
         const collection = db.collection('items');
 
@@ -96,7 +93,6 @@ app.delete(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         console.log("Responding to a DELETE /documents/id")
         console.log(req.query)
         assert.equal(null, err)
-        console.log("Connected successfully to mongo")
         const db = client.db(dbName)
         const collection = db.collection('items');
 
@@ -122,7 +118,6 @@ app.patch(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
         console.log("Responding to a PATCH /documents/id")
         console.log(req.query)
         assert.equal(null, err)
-        console.log("Connected successfully to mongo")
         const db = client.db(dbName)
         const collection = db.collection('items');
 
