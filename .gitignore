@@ -7,3 +7,6 @@ id-function.json
 getall-function.json
 postnew-function.json
 mongo
+serverless.yml.aws
+serverless.yml.azure
+serverless.yml.gcp

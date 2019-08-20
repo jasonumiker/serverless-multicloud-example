@@ -18,6 +18,7 @@ var ObjectID = require('mongodb').ObjectID;
 // Get all records
 app.get(['/documents/all', '/api/app/documents/all'], (req, res, next) => {
     client.connect(function (err) {
+        console.log("Responding to a GET /documents/all")
         assert.equal(null, err)
         console.log("Connected successfully to mongo")
         const db = client.db(dbName)
@@ -31,6 +32,7 @@ app.get(['/documents/all', '/api/app/documents/all'], (req, res, next) => {
                 res.status(400).send({ 'error': 'No documents in database' })
             } else {
                 res.status(200).send(result)
+                console.log(result)
             }
         })
     })
@@ -39,6 +41,7 @@ app.get(['/documents/all', '/api/app/documents/all'], (req, res, next) => {
 // Get specific record
 app.get(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
     client.connect(function (err) {
+        console.log("Responding to a GET /documents/id")
         console.log(req.query)
         assert.equal(null, err)
         console.log("Connected successfully to mongo")
@@ -55,6 +58,7 @@ app.get(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
                     res.status(400).send({ 'error': 'No document matching that id was found' })
                 } else {
                     res.status(200).send(result)
+                    console.log(result)
                 }
             })
         }
@@ -66,6 +70,7 @@ app.get(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
 
 //Insert a document
 app.post(['/documents/new', '/api/app/documents/new'], (req, res, next) => {
+    console.log("Responding to a POST /documents/new")
     console.log(req.body)
     client.connect(function (err) {
         assert.equal(null, err)
@@ -80,6 +85,7 @@ app.post(['/documents/new', '/api/app/documents/new'], (req, res, next) => {
                 res.status(400).send({ 'error': err })
             }
             res.status(200).send(result)
+            console.log(result)
         })
     })
 })
@@ -87,6 +93,7 @@ app.post(['/documents/new', '/api/app/documents/new'], (req, res, next) => {
 //Delete a document
 app.delete(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
     client.connect(function (err) {
+        console.log("Responding to a DELETE /documents/id")
         console.log(req.query)
         assert.equal(null, err)
         console.log("Connected successfully to mongo")
@@ -100,6 +107,7 @@ app.delete(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
                     res.status(400).send({ 'error': err })
                 }
                 res.status(200).send(result)
+                console.log(result)
             })
         }
         else {
@@ -111,6 +119,7 @@ app.delete(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
 //Update a document
 app.patch(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
     client.connect(function (err) {
+        console.log("Responding to a PATCH /documents/id")
         console.log(req.query)
         assert.equal(null, err)
         console.log("Connected successfully to mongo")
@@ -132,6 +141,7 @@ app.patch(['/documents/id', '/api/app/documents/id'], (req, res, next) => {
                     res.status(400).send({ 'error': err })
                 }
                 res.status(200).send(result)
+                console.log(result)
             })
         }
         else {
