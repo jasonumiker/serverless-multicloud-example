@@ -24,9 +24,4 @@ The APIs are:
 `GET` - `/documents/all` - Return all tasks/documents  
 `GET` - `/documents/id` - Return a particular document by ID (via `id` parameter)  
 `DELETE` - `/documents/id` - Delete a particular document by ID (via `id` parameter)  
-`PATCH` - `/documents/id` - Update a particular document by ID (via `id` parameter and it takes `description` and/or `duedate` as the fields to update)  
-
-There is an example of the service up in each cloud:  
-AWS - https://sesallvxkb.execute-api.ap-southeast-2.amazonaws.com/dev/documents/all  
-Azure - https://serverless-multicloud-example.azurewebsites.net/api/app/documents/all  
-Google - https://asia-northeast1-serverless-multicloud-example.cloudfunctions.net/handler/documents/all  
+`PATCH` - `/documents/id` - Update a particular document by ID (via `id` parameter and it takes `description` and/or `duedate` as the fields to update)
